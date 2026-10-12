@@ -19,6 +19,18 @@ public class SearchScreen extends BaseScreen{
     WebElement popUpMessageRegSuccess;
     @AndroidFindBy(xpath = "//android.widget.Toast[@text='Login success!']")
     WebElement popUpMessageLoginSuccess;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='com.telran.ilcarro:id/title' and @text='My Cars']")
+    WebElement btnMyCars;
+    @AndroidFindBy(xpath = "//android.widget.TextView[@resource-id='com.telran.ilcarro:id/title' and @text='Logout']")
+    WebElement btnLogout;
+
+    public void clickBtnMyCars(){
+        clickWait(btnMyCars,3);
+    }
+
+    public void clickBtnLogout(){
+        clickWait(btnLogout,3);
+    }
 
     public void clickBtnDots(){
         clickWait(btnDots, 3);
